@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding: 3rem 0;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn-main {
+    background-image: linear-gradient(to right, #d343b0, #8029fc);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.main {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-size: normal;
+}
