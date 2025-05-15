@@ -55,8 +55,9 @@ export class HomeComponent implements OnInit, OnDestroy  {
           price: Number (item.body),
           image:'assets/images/giaynike.jpg',
         };
-      })
+      }).filter(product => product.price > 300000)
       ),
+      
     ).subscribe((res)=>{
       this.products = res;
 
@@ -80,7 +81,12 @@ ngOnDestroy(): void {
     if (productIndex !== -1){
       this.products.splice(productIndex,1);
     }
-    this.products = this.products.filter((item) =>item.id !== id)
+    this.blogService.deleteBlog(id).subscribe(({data}:any)=>{
+      if (data ==1){
+        this.products = this.products.filter((item) =>item.id !== id)
+        
+      }
+    });
   };
 
   handleChangeVisible = () =>{

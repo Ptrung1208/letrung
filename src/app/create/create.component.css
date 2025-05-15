@@ -3,6 +3,29 @@
     height: calc(170vh - 70px);
 }
 
+.form-control {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.form-control input {
+    width: -webkit-fill-available;
+    border: none;
+    outline: none;
+    padding: .8rem;
+    border-radius: 4px;
+    background: #ededed;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-size: normal;
+}
+
+.form-control label {
+    font-weight: 600;
+}
+
 .group-cart {
     width: 75%;
     background: #ffffff;

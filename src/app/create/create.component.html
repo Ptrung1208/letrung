@@ -1,0 +1,41 @@
+<div class="wrapper-cart">
+    <h1>Create product</h1>
+
+    <div style="
+    width: 70%;
+    margin: auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    " [formGroup]="product">
+
+        <div style="width: 70%; margin:auto; background: #fff;padding: 2rem;border-radius: 8px;">
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <div>
+                    <input type="text" id="name" formControlName="name" />
+                </div>
+                <div *ngIf="name?.dirty ||name?.touched">
+                    <div style="color:rgb(177, 56, 56) ;" *ngIf="name?.hasError">
+                        Name is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="price">Price:</label>
+                <div><input type="text" id="price" formControlName="price" />
+                </div>
+                <div *ngIf="price?.dirty ||price?.touched">
+                    <div style="color:rgb(177, 56, 56) ;" *ngIf="name?.hasError">
+                        price is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="btn-navigation" (click)="handleAddCart()" style="padding: 0.8rem;margin-top: .4rem;color: #fff;">
+                    Add to cart
+                </div>
+            </div>
+        </div>
+
+    </div>
